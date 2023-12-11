@@ -32,7 +32,7 @@ Theme Version:  10.0.0
 	        "nb_sides": 5
 	      },
 	      "image": {
-	        "src": "img/demos/business-consulting-4/generic/generic-7.png",
+	        "src": "../assets/img/demos/business-consulting-4/generic/generic-7.png",
 	        "width": 100,
 	        "height": 100
 	      }

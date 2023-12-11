@@ -35,5 +35,11 @@
     "title": "About",
     "url": "/about",
     "children": []
+  },
+  {
+    "id": 6,
+    "title": "Contact Us",
+    "url": "/contact",
+    "children": []
   }
 ]
