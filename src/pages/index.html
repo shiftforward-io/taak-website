@@ -4,6 +4,8 @@ permalink: /
 description: "this is home page for TAAK"
 ---
 
+{% include "utils/quote-form.njk" %}
+
 <section class="section border-0 m-0 bg-color-quaternary p-relative">
   <div class="container">
     <div class="row custom-hero-row">
@@ -30,12 +32,22 @@ description: "this is home page for TAAK"
             </p>
             <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
               <a
-                href="#start"
+                href="#appointment"
                 data-hash
                 data-hash-offset="0"
                 data-hash-offset-lg="100"
                 class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms"
                 >Book an appointment <i class="fas fa-arrow-right ms-2"></i
+              ></a>
+              <a
+                href="#"
+                data-hash
+                data-hash-offset="0"
+                data-hash-offset-lg="100"
+                data-bs-toggle="modal"
+                data-bs-target="#formModal"
+                class="btn btn-modern btn-dark btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms"
+                >Get a Quote <i class="fa-regular fa-file ms-2"></i
               ></a>
             </div>
             <div class="pt-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
@@ -71,7 +83,7 @@ description: "this is home page for TAAK"
               data-appear-animation="fadeIn"
               data-appear-animation-delay="900"
               style="width: 365px; height: 614px"
-              src="../assets/img/hero-banner.svg"
+              src="../assets/img/hero-home-test3.svg"
               alt="Hero Banner"
             />
           </div>
@@ -169,7 +181,7 @@ description: "this is home page for TAAK"
           </h3>
         </div>
         <h2 class="text-color-dark font-weight-bold text-8 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-          Guide you through the intricacies of retirement planning, ensuring that you can enjoy your golden years with peace of mind.
+          Be a Significant player in the Global Finance & Accounting Outsourcing Industry by 2030
         </h2>
       </div>
     </div>
@@ -190,23 +202,25 @@ description: "this is home page for TAAK"
       <div class="col-lg-6 pt-5 mt-5 pt-lg-0 mt-lg-0">
         <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
           <p class="font-weight-medium text-4-5 line-height-5">
-            A team of seasoned financial experts, we are committed to helping you navigate the complexities of retirement planning in alignment with IRS guidelines.
+            A Professional accounting firm with focus on technology adoption, automation, and integration of Business Intelligence tools with accounting software
           </p>
           <!-- <p class="text-3-5">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendrerit vehicula leo, vel efficitur felis ultrices non. Integer aliquet.</p> -->
 
           <ul class="list list-icons list-icons-style-2 list-icons-lg">
-            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>Expert Guidance</li>
-            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>Personalized Approach</li>
-            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>Transparent Communication</li>
-            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>Compliance Assurance</li>
+            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>7 Day no obligation trial</li>
+            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>Proven increase in business volume</li>
+            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>Standard Operating Process Flow with clients</li>
+            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>Service Level agreements to ensure quality and timely delivery</li>
+            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>Reference from existing clients can be made available on request</li>
+            <li class="line-height-9 text-3-5 mb-1"><i class="fas fa-check border-width-2 text-3"></i>We chase you for work completion on time and not the other way round</li>
           </ul>
         </div>
 
-        <div class="d-block pt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+        <!-- <div class="d-block pt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
           <a href="demo-business-consulting-4-about-us.html" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms"
             >Learn More <i class="fas fa-arrow-right ms-2"></i
           ></a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -250,13 +264,11 @@ description: "this is home page for TAAK"
                   data-icon
                   data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}"
                 />
-                <h4 class="card-title mt-4 mb-2 text-5 font-weight-bold">Personalized Retirement Strategies</h4>
+                <h4 class="card-title mt-4 mb-2 text-5 font-weight-bold">Tax Planning and Advisory</h4>
                 <p class="card-text text-3-5">Create customized retirement strategies tailored to your unique financial situation.</p>
               </div>
               <div class="w-100 text-center p-absolute opacity-0 bottom-30 left-0 transformY-p100 anim-hover-inner-opacity-10 anim-hover-inner-translate-top-0px transition-4ms">
-                <a href="demo-business-consulting-4-services-detail.html" class="read-more text-color-primary font-weight-semibold mt-2 text-2"
-                  >Learn More <i class="fas fa-angle-right position-relative top-1 ms-1"></i
-                ></a>
+                <a href="/tax-planning" class="read-more text-color-primary font-weight-semibold mt-2 text-2">Learn More <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
               </div>
             </div>
           </div>
@@ -273,7 +285,7 @@ description: "this is home page for TAAK"
                   data-icon
                   data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}"
                 />
-                <h4 class="card-title mt-4 mb-2 text-5 font-weight-bold">IRA and 401(k) Management</h4>
+                <h4 class="card-title mt-4 mb-2 text-5 font-weight-bold">Tax Credits</h4>
                 <p class="card-text text-3-5">Ensuring that your retirement accounts align with IRS regulations.</p>
               </div>
               <div class="w-100 text-center p-absolute opacity-0 bottom-30 left-0 transformY-p100 anim-hover-inner-opacity-10 anim-hover-inner-translate-top-0px transition-4ms">
@@ -296,7 +308,7 @@ description: "this is home page for TAAK"
                   data-icon
                   data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}"
                 />
-                <h4 class="card-title mt-4 mb-2 text-5 font-weight-bold">Tax-Efficient Retirement Planning</h4>
+                <h4 class="card-title mt-4 mb-2 text-5 font-weight-bold">Fractional CFO Services</h4>
                 <p class="card-text text-3-5">Make strategic decisions that align with IRS guidelines to minimize tax liabilities.</p>
               </div>
               <div class="w-100 text-center p-absolute opacity-0 bottom-30 left-0 transformY-p100 anim-hover-inner-opacity-10 anim-hover-inner-translate-top-0px transition-4ms">
@@ -306,64 +318,6 @@ description: "this is home page for TAAK"
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row pt-4 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
-        <div class="col-md-4 mb-4 mb-md-0">
-          <div class="card card-border card-border-top card-border-hover bg-color-light border-0 box-shadow-6 box-shadow-hover anim-hover-translate-top-10px transition-3ms anim-hover-inner-wrapper">
-            <div class="card-body p-relative zindex-1 p-5 text-center">
-              <div class="anim-hover-inner-translate-top-20px transition-3ms">
-                <img
-                  width="72"
-                  height="73"
-                  src="../assets/img/demos/business-consulting-4/icons/icon-1.svg"
-                  alt=""
-                  data-icon
-                  data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}"
-                />
-                <h4 class="card-title mt-4 mb-2 text-5 font-weight-bold">Roth IRA Conversions</h4>
-                <p class="card-text text-3-5">We guide you through the process, ensuring compliance with IRS regulations.</p>
-              </div>
-              <div class="w-100 text-center p-absolute opacity-0 bottom-30 left-0 transformY-p100 anim-hover-inner-opacity-10 anim-hover-inner-translate-top-0px transition-4ms">
-                <a href="demo-business-consulting-4-services-detail.html" class="read-more text-color-primary font-weight-semibold mt-2 text-2"
-                  >Learn More <i class="fas fa-angle-right position-relative top-1 ms-1"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4 mb-md-0">
-          <div class="card card-border card-border-top card-border-hover bg-color-light border-0 box-shadow-6 box-shadow-hover anim-hover-translate-top-10px transition-3ms anim-hover-inner-wrapper">
-            <div class="card-body p-relative zindex-1 p-5 text-center">
-              <div class="anim-hover-inner-translate-top-20px transition-3ms">
-                <img
-                  width="72"
-                  height="73"
-                  src="../assets/img/demos/business-consulting-4/icons/icon-2.svg"
-                  alt=""
-                  data-icon
-                  data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}"
-                />
-                <h4 class="card-title mt-4 mb-2 text-5 font-weight-bold">Required Minimum Distributions (RMDs)</h4>
-                <p class="card-text text-3-5">Our advisors help you navigate the complexities of RMDs.</p>
-              </div>
-              <div class="w-100 text-center p-absolute opacity-0 bottom-30 left-0 transformY-p100 anim-hover-inner-opacity-10 anim-hover-inner-translate-top-0px transition-4ms">
-                <a href="demo-business-consulting-4-services-detail.html" class="read-more text-color-primary font-weight-semibold mt-2 text-2"
-                  >Learn More <i class="fas fa-angle-right position-relative top-1 ms-1"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col col-lg-9 text-center">
-        <div class="d-block pt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-          <a href="demo-business-consulting-4-services.html" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms"
-            >Learn More <i class="fas fa-arrow-right ms-2"></i
-          ></a>
         </div>
       </div>
     </div>
@@ -393,29 +347,35 @@ description: "this is home page for TAAK"
       </div>
     </div>
     <div class="row pt-4 pb-3 counters text-light appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
-      <div class="col-lg-4 mb-4 mb-lg-0">
+      <div class="col-lg-3 mb-3 mb-lg-0">
         <div class="counter">
           <strong data-to="500" data-append="+">0</strong>
-          <label class="font-weight-semibold text-4 opacity-7">Cases Completed</label>
+          <label class="font-weight-semibold text-4 opacity-7">Happy Clients</label>
         </div>
       </div>
-      <div class="col-lg-4 mb-4 mb-lg-0">
+      <div class="col-lg-3 mb-3 mb-lg-0">
         <div class="counter">
-          <strong data-to="100" data-append="+">0</strong>
-          <label class="font-weight-semibold text-4 opacity-7">Total Consultants</label>
+          <strong data-to="150" data-append="k+">0</strong>
+          <label class="font-weight-semibold text-4 opacity-7">Hours of Experience</label>
         </div>
       </div>
-      <div class="col-lg-4 mb-4 mb-sm-0">
+      <div class="col-lg-3 mb-3 mb-sm-0">
         <div class="counter">
-          <strong data-to="100" data-append="%">0</strong>
-          <label class="font-weight-semibold text-4 opacity-7">Satisfied Customers</label>
+          <strong data-to="25" data-append="+">0</strong>
+          <label class="font-weight-semibold text-4 opacity-7">Softwares Used</label>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-3 mb-sm-0">
+        <div class="counter">
+          <strong data-to="1500" data-append="+">0</strong>
+          <label class="font-weight-semibold text-4 opacity-7">Projects Completed</label>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section border-0 bg-quaternary m-0">
+<!-- <section class="section border-0 bg-quaternary m-0">
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col col-lg-9 text-center">
@@ -487,33 +447,34 @@ description: "this is home page for TAAK"
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
 <section class="section border-0 bg-light m-0">
   <div class="container py-5">
     <div class="row align-items-center text-center">
       <div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-        <img src="../assets/img/logos/logo-8.png" alt="" class="img-fluid" style="max-width: 90px" />
+        <img src="../assets/img/logo-1.png" alt="" class="img-fluid" style="max-width: 90px" />
       </div>
       <div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-        <img src="../assets/img/logos/logo-9.png" alt="" class="img-fluid" style="max-width: 140px" />
+        <img src="../assets/img/logo-2.png" alt="" class="img-fluid" style="max-width: 140px" />
       </div>
       <div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-        <img src="../assets/img/logos/logo-10.png" alt="" class="img-fluid" style="max-width: 140px" />
+        <img src="../assets/img/logo-3.png" alt="" class="img-fluid" style="max-width: 140px" />
       </div>
       <div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
-        <img src="../assets/img/logos/logo-11.png" alt="" class="img-fluid" style="max-width: 140px" />
+        <img src="../assets/img/logo-4.png" alt="" class="img-fluid" style="max-width: 140px" />
       </div>
       <div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
-        <img src="../assets/img/logos/logo-12.png" alt="" class="img-fluid" style="max-width: 100px" />
+        <img src="../assets/img/logo-5.png" alt="" class="img-fluid" style="max-width: 100px" />
       </div>
       <div class="col-sm-4 col-lg-2">
-        <img src="../assets/img/logos/logo-13.png" alt="" class="img-fluid" style="max-width: 100px" />
+        <img src="../assets/img/logo-6.png" alt="" class="img-fluid" style="max-width: 100px" />
       </div>
     </div>
   </div>
 </section>
 
-<section class="parallax section section-text-light section-parallax bg-primary m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="">
+<section class="parallax section section-text-light section-parallax bg-primary m-0" id="appointment" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="">
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col">
