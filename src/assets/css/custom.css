@@ -1,0 +1,56 @@
+.cfo {
+    border-right: 1px solid #fff;
+}
+
+/*
+* Accordion
+*/
+.custom-accordion-style-1 > .card {
+    border: 1px solid transparent !important;
+    transition: ease border-color 300ms;
+}
+
+.custom-accordion-style-1 > .card .card-header a {
+    position: relative;
+    padding: 23px 30px;
+    background-color: #f4f4f4;
+    transition: ease background-color 300ms, ease color 300ms;
+}
+
+.custom-accordion-style-1 > .card .card-header a:after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    font-size: inherit;
+    font-weight: inherit;
+    transform: translate3d(0, -50%, 0) rotate(45deg);
+    transform-origin: 50% 50%;
+    transition: ease transform 300ms;
+}
+
+.custom-accordion-style-1 > .card .card-header a.collapsed:after {
+    transform: translate3d(0, -50%, 0) rotate(0deg);
+}
+
+.custom-accordion-style-1 > .card .card-header + .collapse.show,
+.custom-accordion-style-1 > .card .card-header + .collapsing {
+    border: 1px solid #efefef;
+    border-top: 0;
+}
+
+.custom-accordion-style-1 > .card + .card {
+    margin-top: 17px;
+}
+
+/*
+* Accordion
+*/
+.custom-accordion-style-1 > .card .card-header a:not(.collapsed) {
+    background-color: var(--primary);
+    color: var(--primary-inverse) !important;
+}
+
+.custom-accordion-style-1 > .card:hover .card-header a.collapsed {
+    color: var(--primary) !important;
+}

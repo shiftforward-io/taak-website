@@ -48,11 +48,6 @@
           </div>
           <div class="row row-gutter-sm">
             <div class="form-group col mb-3">
-              <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required placeholder="Your Name" />
-            </div>
-          </div>
-          <div class="row row-gutter-sm">
-            <div class="form-group col mb-3">
               <input type="tel" value="" data-msg-required="Please enter your number." class="form-control" name="phone" id="phone" required placeholder="Your Phone Number" />
             </div>
           </div>
@@ -84,6 +79,21 @@
                 id="business-nature"
                 required
                 placeholder="Nature of Business"
+              />
+            </div>
+          </div>
+          <div class="row row-gutter-sm">
+            <div class="form-group col mb-3">
+              <input
+                type="number"
+                data-msg-required="Please enter previous financial year revenue"
+                min="1"
+                step="any"
+                class="form-control"
+                name="previousFinancialYear"
+                id="previousFinancialYear"
+                required
+                placeholder="Previous financial year revenue in $"
               />
             </div>
           </div>
