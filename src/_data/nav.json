@@ -51,6 +51,6 @@
   {
     "id": 3,
     "title": "About",
-    "url": "/about"
+    "url": "./about"
   }
 ]
