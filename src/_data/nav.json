@@ -12,12 +12,12 @@
       {
         "id": 4,
         "title": "Tax Planning & Advisory",
-        "url": "/services/tax-planning",
+        "url": "/services/tax-planning/",
         "children": [
           {
             "id": 4.1,
             "title": "Retirement Planning",
-            "url": "/services/tax-planning/retirement-planning",
+            "url": "/services/tax-planning/retirement-planning/",
             "children": []
           }
         ]
@@ -25,25 +25,25 @@
       {
         "id": 5,
         "title": "Tax Credits",
-        "url": "/services/tax-credits",
+        "url": "/services/tax-credits/",
         "children": []
       },
       {
         "id": 6,
         "title": "Fractional CFO",
-        "url": "/services/fractional-cfo",
+        "url": "/services/fractional-cfo/",
         "children": []
       },
       {
         "id": 7,
         "title": "Cost Segregation",
-        "url": "/services/cost-segregation",
+        "url": "/services/cost-segregation/",
         "children": []
       },
       {
         "id": 8,
         "title": "Accounting & Bookeeping",
-        "url": "/services/accounting-bookeeping",
+        "url": "/services/accounting-bookeeping/",
         "children": []
       }
     ]
@@ -51,6 +51,6 @@
   {
     "id": 3,
     "title": "About",
-    "url": "./about"
+    "url": "/about/"
   }
 ]
