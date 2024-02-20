@@ -59,27 +59,29 @@ description: ""
     <div class="row justify-content-center">
       <div class="col">
         <div class="border-top border-color-light-5 text-light pt-4 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
-          <div class="row align-items-center">
-            <div class="col-12 mb-3 mb-lg-0 col-lg">
-              <h2 class="text-color-light font-weight-bold text-5 mb-0">Request a Call Back</h2>
-            </div>
-            <div class="col-12 mb-3 mb-lg-0 col-lg">
-              <input type="text" class="form-control text-3 h-auto py-3 line-height-1 border-0" placeholder="Subject" aria-label="Subject" />
-            </div>
-            <div class="col-12 mb-3 mb-lg-0 col-lg">
-              <input type="text" class="form-control text-3 h-auto py-3 line-height-1 border-0" placeholder="Full Name" aria-label="Full Name" />
-            </div>
-            <div class="col-12 mb-3 mb-lg-0 col-lg">
-              <input type="text" class="form-control text-3 h-auto py-3 line-height-1 border-0" placeholder="Phone Number" aria-label="Phone Number" />
-            </div>
-            <div class="col-12 mb-3 mb-lg-0 col-lg">
-              <div class="d-grid gap-2">
-                <a href="#" class="btn btn-modern btn-dark btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms"
-                  >Submit <i class="fas fa-arrow-right ms-2"></i
-                ></a>
+          <form name="contact" method="POST" data-netlify="true">
+            <div class="row align-items-center">
+              <div class="col-12 mb-3 mb-lg-0 col-lg">
+                <h2 class="text-color-light font-weight-bold text-5 mb-0">Request a Call Back</h2>
+              </div>
+              <div class="col-12 mb-3 mb-lg-0 col-lg">
+                <input type="text" class="form-control text-3 h-auto py-3 line-height-1 border-0" placeholder="Subject" name="subject" aria-label="Subject" />
+              </div>
+              <div class="col-12 mb-3 mb-lg-0 col-lg">
+                <input type="text" class="form-control text-3 h-auto py-3 line-height-1 border-0" placeholder="Full Name" name="full name" aria-label="Full Name" />
+              </div>
+              <div class="col-12 mb-3 mb-lg-0 col-lg">
+                <input type="text" class="form-control text-3 h-auto py-3 line-height-1 border-0" placeholder="Phone Number" name="phone" aria-label="Phone Number" />
+              </div>
+              <div class="col-12 mb-3 mb-lg-0 col-lg">
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-modern btn-dark btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
+                    Submit <i class="fas fa-arrow-right ms-2"></i>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
