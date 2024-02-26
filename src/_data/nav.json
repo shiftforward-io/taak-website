@@ -12,12 +12,12 @@
       {
         "id": 4,
         "title": "Foundational Services",
-        "url": "/services/foundational-services/",
+        "url": "/foundational-services/",
         "children": [
           {
             "id": 4.1,
             "title": "Retirement Planning",
-            "url": "/services/tax-planning/retirement-planning/",
+            "url": "/tax-planning/retirement-planning/",
             "children": []
           }
         ]
@@ -25,13 +25,13 @@
       {
         "id": 5,
         "title": "Guidance & Growth Strategy",
-        "url": "/services/guidance-growth-strategy/",
+        "url": "/guidance-growth-strategy/",
         "children": []
       },
       {
         "id": 6,
         "title": "Tax Offense",
-        "url": "/services/tax-offense/",
+        "url": "/tax-offense/",
         "children": []
       }
     ]
