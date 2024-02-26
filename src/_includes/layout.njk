@@ -2,6 +2,8 @@
 email: "admin@taakconsulting.net"
 phone: "+1 678 835 8328"
 linkedin: "https://www.linkedin.com/company/taak-consulting-llc/"
+instagram: "https://www.instagram.com/taak_cpas/"
+twitter: "https://twitter.com/Taaktaxadvisory"
 address: "3133 Little Bear Ln, Buford, GA 30519"
 ---
 
@@ -14,8 +16,11 @@ address: "3133 Little Bear Ln, Buford, GA 30519"
     <meta name="keywords" content="Tax, Accounting, Consulting, Advisory, KPI, Tax Consulting, Accounting, Bookeeping, Tax Compliance"/>
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"/>
     <meta name="author" content="shiftforward.io"/>
-    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon"/>
-    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png"/>
+    <meta name="title" content="{{ metaTitle }}"/>
+    <link rel="icon" type="img/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png"/>
+    <link rel="icon" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png"/>
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png"/>
     <meta
     name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"/> <!-- Web Fonts  -->
     <link
@@ -53,7 +58,7 @@ address: "3133 Little Bear Ln, Buford, GA 30519"
                   <div class="header-row">
                     <nav class="header-nav-top">
                       <ul class="nav nav-pills">
-                        <li class="nav-item py-2 d-none d-sm-inline-flex pe-2">
+                        <li class="nav-item py-2 pe-2">
                           <span class="ps-0 font-weight-semibold text-color-default text-2-5">{{ address }}</span>
                         </li>
                         <li class="nav-item py-2 pe-2">
@@ -74,7 +79,7 @@ address: "3133 Little Bear Ln, Buford, GA 30519"
                       <ul class="nav nav-pills p-relative bottom-2">
                         <li class="nav-item py-2 d-none d-lg-inline-flex">
                           <a
-                            href="http://www.facebook.com/"
+                            href="#"
                             target="_blank"
                             title="Facebook"
                             class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms">
@@ -83,7 +88,7 @@ address: "3133 Little Bear Ln, Buford, GA 30519"
                         </li>
                         <li class="nav-item py-2 d-none d-lg-inline-flex">
                           <a
-                            href="http://www.twitter.com/"
+                            href="{{ twitter }}"
                             target="_blank"
                             title="Twitter"
                             class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms">
@@ -92,7 +97,7 @@ address: "3133 Little Bear Ln, Buford, GA 30519"
                         </li>
                         <li class="nav-item py-2 d-none d-lg-inline-flex">
                           <a
-                            href="http://www.instagram.com/"
+                            href="{{ instagram }}"
                             target="_blank"
                             title="Instagram"
                             class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms">
@@ -286,17 +291,17 @@ address: "3133 Little Bear Ln, Buford, GA 30519"
                 </ul>
                 <ul class="social-icons social-icons-clean social-icons-medium">
                   <li class="social-icons-facebook">
-                    <a href="http://www.facebook.com/" target="_blank" title="Facebook">
+                    <a href="#" target="_blank" title="Facebook">
                       <i class="fab fa-facebook-f text-color-light"></i>
                     </a>
                   </li>
                   <li class="social-icons-twitter">
-                    <a href="http://www.twitter.com/" target="_blank" title="Twitter">
+                    <a href="{{ twitter }}" target="_blank" title="Twitter">
                       <i class="fab fa-twitter text-color-light"></i>
                     </a>
                   </li>
                   <li class="social-icons-instagram">
-                    <a href="http://www.instagram.com/" target="_blank" title="Instagram">
+                    <a href="{{ instagram }}" target="_blank" title="Instagram">
                       <i class="fab fa-instagram text-color-light"></i>
                     </a>
                   </li>
