@@ -1,6 +1,6 @@
 backend:
   name: test-repo
-  branch: main
+  branch: decap-integration
   commit_messages:
   create: Create {{collection}} “{{slug}}”
   update: Update {{collection}} “{{slug}}”
