@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: git-gateway
   branch: decap-integration
   commit_messages:
   create: Create {{collection}} “{{slug}}”
