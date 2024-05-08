@@ -1,5 +1,7 @@
 # 11ty
 _site/
+#devcontainer
+.devcontainer
 # Logs
 logs
 *.log

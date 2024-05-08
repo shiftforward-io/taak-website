@@ -1,0 +1,18 @@
+---
+layout: layout.njk
+---
+
+<div>
+    <div>
+        <h1>{{title}}</h1>
+        <p>
+            <time>
+                {{date | readableDate}} by
+                <a>{{author}}</a>
+            </time>
+        </p>
+    </div>
+    <article>
+        {{content | safe}}
+    </article>
+</div>
