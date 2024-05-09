@@ -27,7 +27,7 @@ layout: layout.njk
                     <div class="card-body z-index-1 p-0">
                         <p class="text-uppercase text-1 mb-3 text-color-default">
                             <time>
-                                {{ date | readableDate }}
+                                {{ date }}
                             </time>
                             <span class="opacity-3 d-inline-block px-2">|</span>
                             {{ author }}
@@ -51,12 +51,12 @@ layout: layout.njk
                                 <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Author</h3>
                                 <div class="img-thumbnail img-thumbnail-no-borders d-block pb-3">
                                     <a href="blog-post.html">
-                                        <img src="img/avatars/avatar.jpg" class="rounded-circle" alt="">
+                                        <img src="/assets/img/avatars/avatar.jpg" class="rounded-circle" alt="">
                                     </a>
                                 </div>
                                 <p>
                                     <strong class="name">
-                                        <a href="#" class="text-4 text-dark pb-2 pt-2 d-block">John Doe</a>
+                                        <a href="#" class="text-4 text-dark pb-2 pt-2 d-block">{{author}}</a>
                                     </strong>
                                 </p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius
@@ -96,60 +96,15 @@ layout: layout.njk
                     <hr class="my-2">
                 </div>
                 <div class="px-3 mt-4">
-                    <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0">Categories</h3>
-                    <ul class="nav nav-list flex-column mt-2 mb-0 p-relative right-9">
-                        <li class="nav-item">
-                            <a class="nav-link bg-transparent border-0" href="#">Design (2)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bg-transparent border-0 active" href="#">Photos (4)</a>
-                            <ul>
-                                <li class="nav-item">
-                                    <a class="nav-link bg-transparent border-0" href="#">Animals</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link bg-transparent border-0 active" href="#">Business</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link bg-transparent border-0" href="#">Sports</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link bg-transparent border-0" href="#">People</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bg-transparent border-0" href="#">Videos (3)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bg-transparent border-0" href="#">Lifestyle (2)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bg-transparent border-0" href="#">Technology (1)</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="py-1 clearfix">
-                    <hr class="my-2">
-                </div>
-                <div class="px-3 mt-4">
                     <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Recent Posts</h3>
                     <div class="pb-2 mb-1">
-                        <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">10 Jan 2024
+                        {% for post in collections.recentPosts %}
+                        <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">
+                            {{ post.date | readableDate }}
                             <span class="opacity-3 d-inline-block px-2">|</span>
-                            John Doe</a>
-                        <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Lorem ipsum
-                            dolor sit amet</a>
-                        <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">10 Jan 2024
-                            <span class="opacity-3 d-inline-block px-2">|</span>
-                            John Doe</a>
-                        <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Consectetur
-                            adipiscing elit</a>
-                        <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">10 Jan 2024
-                            <span class="opacity-3 d-inline-block px-2">|</span>
-                            John Doe</a>
-                        <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Vivamus
-                            sollicitudin nibh luctus</a>
+                            {{ post.data.author }}</a>
+                        <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">{{post.data.title}}</a>
+                        {% endfor %}
                     </div>
                 </div>
             </aside>

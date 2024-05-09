@@ -7,6 +7,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy")
   })
+  eleventyConfig.addCollection("recentPosts", function(collection) {
+    const posts = collection.getFilteredByTag("post");
+    return getRecentPosts(posts);
+  });
   return {
     dir: {
       input: "src",
@@ -16,4 +20,9 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["md", "html", "liquid", "njk"],
   }
+}
+function getRecentPosts(posts) {
+  const sortedPosts = posts.sort((a, b) => b.date - a.date);
+  const recentPosts = sortedPosts.slice(0, 5);
+  return recentPosts;
 }

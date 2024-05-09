@@ -48,31 +48,6 @@ layout: blog.njk
         </div>
       </article>
       {% endfor %}
-
-      <article class="mb-5">
-        <div class="card bg-transparent border-0">
-          <div class="card-body p-0 z-index-1">
-            <a href="" data-cursor-effect-hover="plus">
-              <img class="card-img-top rounded-0 mb-2" src="/assets/img/blog/wide/blog-41.jpg" alt="Card Image" />
-            </a>
-            <p class="text-uppercase text-color-default text-1 my-2">
-              <time pubdate datetime="2024-01-10">10 Jan 2024</time>
-              <span class="opacity-3 d-inline-block px-2">|</span>
-              John Doe
-            </p>
-            <div class="card-body p-0">
-              <h4 class="card-title text-5 font-weight-bold pb-1 mb-2">
-                <a class="text-color-dark text-color-hover-primary text-decoration-none" href="">How to Grow your Business</a>
-              </h4>
-              <p class="card-text mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lorem , consectetur adipiscing elit...</p>
-              <a href="" class="read-more text-color-primary font-weight-semibold mt-0 text-2"
-                >Read More <i class="fas fa-angle-right position-relative top-1 ms-1"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </article>
-
       <ul class="pagination pagination-rounded pagination-md justify-content-center">
         <li class="page-item">
           <a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-left"></i></a>
@@ -99,41 +74,15 @@ layout: blog.njk
           <hr class="my-2" />
         </div>
         <div class="px-3 mt-4">
-          <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0">Categories</h3>
-          <ul class="nav nav-list flex-column mt-2 mb-0 p-relative right-9">
-            <li class="nav-item"><a class="nav-link bg-transparent border-0" href="#">Design (2)</a></li>
-            <li class="nav-item">
-              <a class="nav-link bg-transparent border-0 active" href="#">Photos (4)</a>
-              <ul>
-                <li class="nav-item"><a class="nav-link bg-transparent border-0" href="#">Animals</a></li>
-                <li class="nav-item"><a class="nav-link bg-transparent border-0 active" href="#">Business</a></li>
-                <li class="nav-item"><a class="nav-link bg-transparent border-0" href="#">Sports</a></li>
-                <li class="nav-item"><a class="nav-link bg-transparent border-0" href="#">People</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link bg-transparent border-0" href="#">Videos (3)</a></li>
-            <li class="nav-item"><a class="nav-link bg-transparent border-0" href="#">Lifestyle (2)</a></li>
-            <li class="nav-item"><a class="nav-link bg-transparent border-0" href="#">Technology (1)</a></li>
-          </ul>
-        </div>
-        <div class="py-1 clearfix">
-          <hr class="my-2" />
-        </div>
-        <div class="px-3 mt-4">
           <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Recent Posts</h3>
           <div class="pb-2 mb-1">
-            <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none"
-              >10 Jan 2024 <span class="opacity-3 d-inline-block px-2">|</span> John Doe</a
-            >
-            <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Lorem ipsum dolor sit amet</a>
-            <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none"
-              >10 Jan 2024 <span class="opacity-3 d-inline-block px-2">|</span> John Doe</a
-            >
-            <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Consectetur adipiscing elit</a>
-            <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none"
-              >10 Jan 2024 <span class="opacity-3 d-inline-block px-2">|</span> John Doe</a
-            >
-            <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Vivamus sollicitudin nibh luctus</a>
+            {% for post in collections.recentPosts %}
+              <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">
+                  {{ post.date | readableDate }}
+                  <span class="opacity-3 d-inline-block px-2">|</span>
+                  {{ post.data.author }}</a>
+              <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">{{post.data.title}}</a>
+            {% endfor %}
           </div>
         </div>
         <div class="py-1 clearfix">
