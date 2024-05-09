@@ -1,3 +1,4 @@
+const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
   // Set custom directories for input, output, includes, and data
   eleventyConfig.addPassthroughCopy("src/assets")
@@ -13,6 +14,6 @@ module.exports = function (eleventyConfig) {
       data: "_data",
       output: "_site",
     },
-    templateFormats: ["html", "liquid", "njk"],
+    templateFormats: ["md", "html", "liquid", "njk"],
   }
 }
