@@ -2,17 +2,240 @@
 layout: layout.njk
 ---
 
-<div>
-    <div>
-        <h1>{{title}}</h1>
-        <p>
-            <time>
-                {{date | readableDate}} by
-                <a>{{author}}</a>
-            </time>
-        </p>
+<section class="page-header page-header-modern bg-color-quaternary p-relative">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+                <h1 class="text-color-dark font-weight-bold">{{title}}</h1>
+            </div>
+            <div class="col-md-4 order-1 order-md-2 align-self-center">
+                <ul class="breadcrumb d-flex justify-content-md-end text-3-5">
+                    <li>
+                        <a href="demo-business-consulting-4.html" class="text-color-default text-color-hover-primary text-decoration-none">HOME</a>
+                    </li>
+                    <li class="active">Blog</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <article>
-        {{content | safe}}
-    </article>
+</section>
+<div class="container pt-4 pb-5 mb-5">
+    <div class="row">
+        <div class="col-lg-8 mb-5 mb-lg-0">
+            <article>
+                <div class="card border-0">
+                    <div class="card-body z-index-1 p-0">
+                        <p class="text-uppercase text-1 mb-3 text-color-default">
+                            <time pubdate>
+                                {{ date | readableDate }}
+                            </time>
+                            <span class="opacity-3 d-inline-block px-2">|</span>
+                            {{ author }}
+                        </p>
+                        <div class="post-image pb-4">
+                            <img class="card-img-top rounded-0" src="/assets/img/blog/wide/blog-41.jpg" alt="Card Image">
+                        </div>
+                        <div class="card-body p-0">
+                            {{content | safe}}
+                            <!-- Go to www.addtoany.com to customize -->
+                            <!-- AddToAny BEGIN -->
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style"> <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                <a class="a2a_button_facebook"></a>
+                                <a class="a2a_button_x"></a>
+                                <a class="a2a_button_copy_link"></a>
+                            </div>
+                            <script async src="https://static.addtoany.com/menu/page.js"></script>
+                            <!-- AddToAny END -->
+                            <hr class="my-5">
+                            <div class="post-block post-author">
+                                <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Author</h3>
+                                <div class="img-thumbnail img-thumbnail-no-borders d-block pb-3">
+                                    <a href="blog-post.html">
+                                        <img src="img/avatars/avatar.jpg" class="rounded-circle" alt="">
+                                    </a>
+                                </div>
+                                <p>
+                                    <strong class="name">
+                                        <a href="#" class="text-4 text-dark pb-2 pt-2 d-block">John Doe</a>
+                                    </strong>
+                                </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius
+                                    vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus.</p>
+                            </div>
+                            <hr class="my-5">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="blog-sidebar col-lg-4 pt-4 pt-lg-0">
+            <aside class="sidebar">
+                <div class="px-3 mb-4">
+                    <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">About The Blog</h3>
+                    <p class="m-0">{{description}}</p>
+                </div>
+                <div class="py-1 clearfix">
+                    <hr class="my-2">
+                </div>
+                <div class="px-3 mt-4">
+                    <form action="" method="post">
+                        <div class="input-group mb-3 pb-1">
+                            <input
+                                class="form-control box-shadow-none text-1 border-0 bg-color-grey"
+                                placeholder="Search..."
+                                name="s"
+                                id="s"
+                                type="text">
+                            <button type="submit" class="btn bg-color-grey text-1 p-2">
+                                <i class="fas fa-search m-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="py-1 clearfix">
+                    <hr class="my-2">
+                </div>
+                <div class="px-3 mt-4">
+                    <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0">Categories</h3>
+                    <ul class="nav nav-list flex-column mt-2 mb-0 p-relative right-9">
+                        <li class="nav-item">
+                            <a class="nav-link bg-transparent border-0" href="#">Design (2)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-transparent border-0 active" href="#">Photos (4)</a>
+                            <ul>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-transparent border-0" href="#">Animals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-transparent border-0 active" href="#">Business</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-transparent border-0" href="#">Sports</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-transparent border-0" href="#">People</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-transparent border-0" href="#">Videos (3)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-transparent border-0" href="#">Lifestyle (2)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-transparent border-0" href="#">Technology (1)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-1 clearfix">
+                    <hr class="my-2">
+                </div>
+                <div class="px-3 mt-4">
+                    <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Recent Posts</h3>
+                    <div class="pb-2 mb-1">
+                        <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">10 Jan 2024
+                            <span class="opacity-3 d-inline-block px-2">|</span>
+                            John Doe</a>
+                        <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Lorem ipsum
+                            dolor sit amet</a>
+                        <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">10 Jan 2024
+                            <span class="opacity-3 d-inline-block px-2">|</span>
+                            John Doe</a>
+                        <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Consectetur
+                            adipiscing elit</a>
+                        <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">10 Jan 2024
+                            <span class="opacity-3 d-inline-block px-2">|</span>
+                            John Doe</a>
+                        <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Vivamus
+                            sollicitudin nibh luctus</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
 </div>
+<section
+    class="parallax section section-text-light section-parallax bg-primary m-0"
+    id="appointment"
+    data-plugin-parallax
+    data-plugin-options="{'speed': 1.5}"
+    data-image-src="">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div
+                    class="feature-box align-items-center border-0 float-lg-end mb-4 mb-lg-0 appear-animation"
+                    data-appear-animation="fadeInRightShorterPlus"
+                    data-appear-animation-delay="300">
+                    <div class="feature-box-icon bg-transparent">
+                        <i class="icons icon-phone text-6 text-color-light"></i>
+                    </div>
+                    <div class="feature-box-info line-height-2 ps-1">
+                        <span class="d-block text-1 text-light font-weight-semibold text-color-default ws-nowrap">CALL US NOW</span>
+                        <strong class="text-4-5">
+                            <a href="tel:{{ phone }}" class="text-color-light text-decoration-none ws-nowrap">{{ phone }}</a>
+                        </strong>
+                    </div>
+                </div>
+                <h2
+                    class="text-color-light font-weight-bold text-8 pb-4 mb-0 appear-animation"
+                    data-appear-animation="fadeInUpShorter"
+                    data-appear-animation-delay="200">Tax Accounting Advisory KPI</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col">
+                <div
+                    class="border-top border-color-light-5 text-light pt-4 appear-animation"
+                    data-appear-animation="fadeIn"
+                    data-appear-animation-delay="300">
+                    <form name="contact" method="POST" data-netlify="true">
+                        <div class="row align-items-center">
+                            <div class="col-12 mb-3 mb-lg-0 col-lg">
+                                <h2 class="text-color-light font-weight-bold text-5 mb-0">Request a Call Back</h2>
+                            </div>
+                            <input type="hidden" name="subject" value="New lead from %{formName} (%{submissionId})"/>
+                            <div class="col-12 mb-3 mb-lg-0 col-lg">
+                                <input
+                                    type="text"
+                                    class="form-control text-3 h-auto py-3 line-height-1 border-0"
+                                    placeholder="Description"
+                                    name="description"
+                                    aria-label="Description"/>
+                            </div>
+                            <div class="col-12 mb-3 mb-lg-0 col-lg">
+                                <input
+                                    type="text"
+                                    class="form-control text-3 h-auto py-3 line-height-1 border-0"
+                                    placeholder="Full Name"
+                                    name="full name"
+                                    aria-label="Full Name"/>
+                            </div>
+                            <div class="col-12 mb-3 mb-lg-0 col-lg">
+                                <input
+                                    type="text"
+                                    class="form-control text-3 h-auto py-3 line-height-1 border-0"
+                                    placeholder="Phone Number"
+                                    name="phone"
+                                    aria-label="Phone Number"/>
+                            </div>
+                            <div class="col-12 mb-3 mb-lg-0 col-lg">
+                                <div class="d-grid gap-2">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-modern btn-dark btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px
+                                            transition-2ms">
+                                        Submit
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
