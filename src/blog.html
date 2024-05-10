@@ -1,9 +1,15 @@
 ---
 layout: blog.njk
+pagination:
+  data: collections.post
+  size: 10  # Number of posts per page
+  alias: posts
+  generatePageOnEmptyData: true
+  reverse: true
 ---
 
 <div class="col-lg-8 mb-5 mb-lg-0">
-  {% for post in collections.post reversed %}
+  {% for post in posts %}
   <article class="mb-5">
     <div class="card bg-transparent border-0">
       <div class="card-body p-0 z-index-1">
@@ -30,15 +36,40 @@ layout: blog.njk
     </div>
   </article>
   {% endfor %}
+
   <ul class="pagination pagination-rounded pagination-md justify-content-center">
+    {% if page.url != pagination.href.first %}
+    <a class="page-link" href="{{ pagination.href.previous }}" data-cursor-effect-hover="fit">
+      <i class="fas fa-angle-left"></i>
+    </a>
+    {% else %}
+    <a class="page-link" data-cursor-effect-hover="fit">
+      <i class="fas fa-angle-left"></i>
+    </a>
+    {% endif %}
+    {%- assign loopIndexVariable = 0 %}
+    {%- for page in pagination.pages %}
+      <li class="page-item">
+        <a class="page-link {% if page.url == pagination.hrefs[loopIndexVariable] %} active {% endif %}" 
+         href="{{ pagination.hrefs[loopIndexVariable] }}" 
+         {% if page.url == pagination.hrefs[loopIndexVariable]  %} 
+         aria-current="page"
+         {% endif %}>
+          {{ loopIndexVariable | plus:1 }}
+        </a>
+      </li>
+    {%- assign loopIndexVariable = loopIndexVariable | plus: 1 %}
+    {%- endfor %}
     <li class="page-item">
-      <a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-left"></i></a>
-    </li>
-    <li class="page-item active"><a class="page-link" href="#" data-cursor-effect-hover="fit">1</a></li>
-    <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">2</a></li>
-    <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-right"></i></a>
+      {% if page.url != pagination.href.last %}
+      <a class="page-link" href="{{ pagination.href.next }}" data-cursor-effect-hover="fit">
+        <i class="fas fa-angle-right"></i>
+      </a>
+      {% else %}
+      <a class="page-link" data-cursor-effect-hover="fit">
+        <i class="fas fa-angle-right"></i>
+      </a>
+      {% endif %}
     </li>
   </ul>
 </div>
