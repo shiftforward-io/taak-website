@@ -1,16 +1,27 @@
-const { DateTime } = require("luxon");
+const searchFilter = require("./src/filters/searchFilter");
+
 module.exports = function (eleventyConfig) {
+
   // Set custom directories for input, output, includes, and data
   eleventyConfig.addPassthroughCopy("src/assets")
+  eleventyConfig.addPassthroughCopy("src/js")
   eleventyConfig.addPassthroughCopy({ "src/admin/config.yml": "./admin/config.yml" })
+  
   // readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy")
+    return dateReadable = new Date(dateObj).toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
   })
   eleventyConfig.addCollection("recentPosts", function(collection) {
     const posts = collection.getFilteredByTag("post");
     return getRecentPosts(posts);
   });
+  
+  //search filter
+  eleventyConfig.addFilter("search", searchFilter);
+  eleventyConfig.addCollection("posts", function(collection) {
+    return [...collection.getFilteredByGlob("src/posts/**/*.md")];
+  });
+  
   return {
     dir: {
       input: "src",

@@ -8,7 +8,7 @@ layout: blog.njk
             <div class="card-body z-index-1 p-0">
                 <p class="text-uppercase text-1 mb-3 text-color-default">
                     <time>
-                        {{ date }}
+                        {{ date | readableDate }}
                     </time>
                     <span class="opacity-3 d-inline-block px-2">|</span>
                     {{ author }}
@@ -20,21 +20,9 @@ layout: blog.njk
                 </div>
                 <div class="card-body p-0">
                     {{content | safe}}
-                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                        <a class="a2a_button_facebook"></a>
-                        <a class="a2a_button_x"></a>
-                        <a class="a2a_button_copy_link"></a>
-                    </div>
-                    <script async src="https://static.addtoany.com/menu/page.js"></script>
                     <hr class="my-5">
                     <div class="post-block post-author">
                         <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Author</h3>
-                        <div class="img-thumbnail img-thumbnail-no-borders d-block pb-3">
-                            <a href="">
-                                <img src="/assets/img/avatars/avatar.jpg" class="rounded-circle" alt="">
-                            </a>
-                        </div>
                         <p>
                             <strong class="name">
                                 <a href="#" class="text-4 text-dark pb-2 pt-2 d-block">{{ author }}</a>

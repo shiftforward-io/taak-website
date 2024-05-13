@@ -26,20 +26,27 @@ layout: layout.njk
             {{ content | safe }}
             <div class="blog-sidebar col-lg-4 pt-4 pt-lg-0">
                 <aside class="sidebar">
+                    {% if thumbnail %}
+                    <div class="px-3 mb-4">
+                        <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">About The Blog</h3>
+                        <p class="m-0">{{description}}</p>
+                    </div>
+                    {% endif %}
                     <div class="px-3">
-                        <form action="" method="post">
                             <div class="input-group mb-3 pb-1">
                                 <input
                                     class="form-control box-shadow-none text-1 border-0 bg-color-grey"
                                     placeholder="Search..."
-                                    name="s"
-                                    id="s"
-                                    type="text"/>
-                                <button type="submit" class="btn bg-color-grey text-1 p-2">
-                                    <i class="fas fa-search m-2"></i>
-                                </button>
+                                    name="search-posts"
+                                    id="search-posts"
+                                    type="search"/>
                             </div>
-                        </form>
+                        <ul id="searchResults" class="simple-post-list m-0"></ul>
+                        <div id="noResultsFound" style="display: none">
+                            <p style="color: #777">No results found.</p>
+                        </div>
+                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+                        <script type="text/javascript" src="/js/search.js"></script>
                     </div>
                     <div class="py-1 clearfix">
                         <hr class="my-2"/>
