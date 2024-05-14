@@ -6,6 +6,7 @@ pagination:
   alias: posts
   generatePageOnEmptyData: true
   reverse: true
+permalink: "/blog/{{ pagination.pageNumber | plus: 1 }}"
 ---
 
 <div class="col-lg-8 mb-5 mb-lg-0">
@@ -50,7 +51,7 @@ pagination:
     {%- assign loopIndexVariable = 0 %}
     {%- for page in pagination.pages %}
       <li class="page-item">
-        <a class="page-link {% if page.url == pagination.hrefs[loopIndexVariable] %} active {% endif %}" 
+        <a class="page-link {% if pagination.pageNumber == loopIndexVariable %} active {% endif %}" 
          href="{{ pagination.hrefs[loopIndexVariable] }}" 
          {% if page.url == pagination.hrefs[loopIndexVariable]  %} 
          aria-current="page"
