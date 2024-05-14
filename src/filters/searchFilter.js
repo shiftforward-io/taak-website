@@ -1,19 +1,11 @@
-const elasticlunr = require("elasticlunr");
-
-module.exports = function (collection) {
-  var index = elasticlunr(function () {
-    this.addField("title");
-    this.addField("date");
-    this.setRef("id");
-  });
-
+module.exports = function(collection) {
+  const allPosts = [];
   collection.forEach((page) => {
-    index.addDoc({
+    allPosts.push({
       id: page.url,
       title: page.template.frontMatter.data.title,
       date: page.date,
     });
   });
-
-  return index.toJSON();
+  return allPosts;
 };
