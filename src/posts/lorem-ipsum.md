@@ -1,6 +1,6 @@
 ---
 thumbnail: /assets/uploads/placeholder.jpeg
-title: Lorem Ipsum
+title: Lorem Ipsummmmm
 description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
   consectetur, adipisci velit
 author: Chirag Paliwal
