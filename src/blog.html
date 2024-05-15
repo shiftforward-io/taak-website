@@ -1,0 +1,76 @@
+---
+layout: blog.njk
+pagination:
+  data: collections.post
+  size: 10  # Number of posts per page
+  alias: posts
+  generatePageOnEmptyData: true
+  reverse: true
+permalink: "/blog/{{ pagination.pageNumber | plus: 1 }}/"
+---
+
+<div class="col-lg-8 mb-5 mb-lg-0">
+  {% for post in posts %}
+  <article class="mb-5">
+    <div class="card bg-transparent border-0">
+      <div class="card-body p-0 z-index-1">
+        <a href="{{ post.url }}" data-cursor-effect-hover="plus">
+          <img class="card-img-top rounded-0 mb-2" src="{{post.data.thumbnail}}" alt="Card Image" />
+        </a>
+        <p class="text-uppercase text-color-default text-1 my-2">
+          <time >
+            {{ post.date | readableDate }}
+          </time>
+          <span class="opacity-3 d-inline-block px-2">|</span>
+          {{ post.data.author }}
+        </p>
+        <div class="card-body p-0">
+          <h4 class="card-title text-5 font-weight-bold pb-1 mb-2">
+            <a class="text-color-dark text-color-hover-primary text-decoration-none" href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </h4>
+          <p class="card-text mb-2">{{ post.data.description }}</p>
+          <a href="{{ post.url | url }}" class="read-more text-color-primary font-weight-semibold mt-0 text-2"
+            >Read More <i class="fas fa-angle-right position-relative top-1 ms-1"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+
+  <ul class="pagination pagination-rounded pagination-md justify-content-center">
+    {% if page.url != pagination.href.first %}
+    <a class="page-link" href="{{ pagination.href.previous }}" data-cursor-effect-hover="fit">
+      <i class="fas fa-angle-left"></i>
+    </a>
+    {% else %}
+    <a class="page-link" data-cursor-effect-hover="fit">
+      <i class="fas fa-angle-left"></i>
+    </a>
+    {% endif %}
+    {%- assign loopIndexVariable = 0 %}
+    {%- for page in pagination.pages %}
+      <li class="page-item">
+        <a class="page-link {% if pagination.pageNumber == loopIndexVariable %} active {% endif %}" 
+         href="{{ pagination.hrefs[loopIndexVariable] }}" 
+         {% if pagination.pageNumber == loopIndexVariable  %} 
+         aria-current="page"
+         {% endif %}>
+          {{ loopIndexVariable | plus:1 }}
+        </a>
+      </li>
+    {%- assign loopIndexVariable = loopIndexVariable | plus: 1 %}
+    {%- endfor %}
+    <li class="page-item">
+      {% if page.url != pagination.href.last %}
+      <a class="page-link" href="{{ pagination.href.next }}" data-cursor-effect-hover="fit">
+        <i class="fas fa-angle-right"></i>
+      </a>
+      {% else %}
+      <a class="page-link" data-cursor-effect-hover="fit">
+        <i class="fas fa-angle-right"></i>
+      </a>
+      {% endif %}
+    </li>
+  </ul>
+</div>

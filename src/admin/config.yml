@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+  create: Create {{collection}} “{{slug}}”
+  update: Update {{collection}} “{{slug}}”
+  delete: Delete {{collection}} “{{slug}}”
+  uploadMedia: Upload “{{path}}”
+  deleteMedia: Delete “{{path}}”
+  openAuthoring: '{{message}}'
+
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://taakconsulting.net/
+
+# publish_mode: editorial_workflow
+local_backend: true
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "blog"  # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Blogs"
+    label_singular: 'Blog' # Used in the UI, ie: "New Post"
+    folder: "src/posts"
+    editor:
+      preview: false
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    create: true # Allow users to create new documents in this collection
+    fields:
+      - { label: "Post Image", name: "thumbnail", widget: "image" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "About Author", name: "aboutauthor", widget: "string", required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: 'HH:mm', format: 'YYYY-MM-DD HH:mm'}
+      - { label: "Body", name: "body", widget: "markdown" }
