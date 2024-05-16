@@ -13,12 +13,10 @@
       return;
     }
   
-    let dateReadable;
     const results = allPosts.filter((item) => {
-      dateReadable = new Date(item.date).toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" });
       return (
         item.title.toLowerCase().includes(query) ||
-        dateReadable.toLowerCase().includes(query)
+        new Date(item.date).toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).toLowerCase().includes(query)
       );
     });
   
@@ -30,7 +28,7 @@
             <div class="post-info">
               <a href="${result.id}">${result.title}</a>
               <div class="post-meta">
-                <span class="text-dark text-uppercase font-weight-semibold">Post</span> | ${dateReadable}
+                <span class="text-dark text-uppercase font-weight-semibold">Post</span> | ${new Date(result.date).toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" })}
               </div>
             </div>
           </li>

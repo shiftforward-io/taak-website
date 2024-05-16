@@ -6,7 +6,7 @@ pagination:
   alias: posts
   generatePageOnEmptyData: true
   reverse: true
-permalink: "/blog/{{ pagination.pageNumber | plus: 1 }}/"
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber | plus: 1 }}{% endif %}/"
 ---
 
 <div class="col-lg-8 mb-5 mb-lg-0">
